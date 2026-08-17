@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information Portal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #f0f4f8; color: #333; line-height: 1.6; }
+        header { background: #1e3a8a; color: white; text-align: center; padding: 40px 20px; }
+        nav { background: #0f172a; display: flex; justify-content: center; gap: 20px; padding: 12px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        .card { background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        h2 { color: #1e3a8a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 15px; }
+        ul { list-style-type: square; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+        .facility-box { background: #eff6ff; padding: 15px; border-radius: 6px; text-align: center; font-weight: bold; color: #1e40af; }
+        footer { text-align: center; padding: 20px; background: #0f172a; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DR Mane College Kagal</h1>
+        <p>Excellence in Education & Technology</p>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <div class="card">
+            <h2>About Our College</h2>
+            <p>Our institution is dedicated to providing quality higher education in Computer Applications and Science. We focus on practical knowledge, skill development, and career growth for students.</p>
+        </div>
+
+        <!-- Courses Section -->
+        <div class="card">
+            <h2>Courses Offered</h2>
+            <ul>
+                <li><strong>BCA</strong> - Bachelor of Computer Applications (3 Years)</li>
+                <li><strong>B.Sc (CS)</strong> - Bachelor of Science in Computer Science (3 Years)</li>
+                <li><strong>MCA</strong> - Master of Computer Applications (2 Years)</li>
+            </ul>
+        </div>
+
+        <!-- Campus Facilities Section -->
+        <div class="card">
+            <h2>Campus Facilities</h2>
+            <div class="grid">
+                <div class="facility-box">💻 Computer Labs</div>
+                <div class="facility-box">📚 Central Library</div>
+                <div class="facility-box">🌐 High-Speed Wi-Fi</div>
+                <div class="facility-box">⚽ Sports Complex</div>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="card">
+            <h2>Contact Details</h2>
+            <p><strong>Email:</strong> info@unishivaji.ac.in</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Address:</strong> Campus Road, University Circle, City</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 College Information Portal. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

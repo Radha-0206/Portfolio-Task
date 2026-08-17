@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f9ff;
+    color: #222;
+}
+
+/* NAVBAR */
+
+nav {
+    background: #0b4f8a;
+    color: white;
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #8ed8ff;
+}
+
+
+/* HOME */
+
+.home {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf6ff,
+            #ffffff
+        );
+}
+
+.home-content {
+    max-width: 850px;
+}
+
+
+/* PROFILE PHOTO */
+
+.profile {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #168bd1;
+    box-shadow: 0 8px 25px rgba(22, 139, 209, 0.35);
+    margin-bottom: 25px;
+}
+
+/* HOME TEXT */
+
+.home h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.home h1 span {
+    color: #168bd1;
+}
+
+.home h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 18px;
+    color: #555;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* BUTTON */
+
+.btn {
+    display: inline-block;
+
+    background: #168bd1;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(22,139,209,0.3);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0b4f8a;
+    transform: translateY(-3px);
+}
+
+
+/* COMMON SECTION */
+
+section:not(.home) {
+    padding: 80px 8%;
+
+    text-align: center;
+}
+
+section:not(.home) > h2 {
+    font-size: 35px;
+
+    color: #0b4f8a;
+
+    margin-bottom: 30px;
+}
+
+section:not(.home) > p {
+    max-width: 800px;
+
+    margin: 10px auto;
+
+    color: #555;
+
+    line-height: 1.7;
+}
+
+
+/* ABOUT */
+
+#about {
+    background: white;
+}
+
+#about h3 {
+    color: #168bd1;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 35px;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+/* Card Link Styling (Ata card click honar) */
+.card {
+    width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-top: 4px solid #168bd1;
+    transition: 0.3s;
+    
+    /* Navin added lines: links blue/underline distat te घालवण्याsathi */
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(22,139,209,0.18);
+}
+
+.card h3 {
+    color: #0b4f8a;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* EDUCATION */
+
+#education {
+    background: #f5f9ff;
+}
+
+
+/* SKILLS */
+
+#skills {
+    background: white;
+}
+
+.skills {
+    max-width: 800px;
+
+    margin: 35px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.skills span {
+    background: #e6f4ff;
+
+    color: #0b4f8a;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    border: 1px solid #b9e3ff;
+
+    transition: 0.3s;
+}
+
+./* POPUP MODAL STYLING */
+.skills span {
+    cursor: pointer;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    color: #0b4f8a;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+
+/* PROJECTS */
+
+#projects {
+    background: #f5f9ff;
+}
+
+
+/* CONTACT */
+
+#contact {
+    background: white;
+}
+
+#contact p {
+    background: #f5f9ff;
+
+    max-width: 500px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin: 12px auto !important;
+
+    color: #333 !important;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #0b4f8a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .home h1 {
+        font-size: 35px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+}

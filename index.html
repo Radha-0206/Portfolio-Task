@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <h2>My Portfolio</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="home" class="home">
+
+        <div class="home-content">
+
+            <img src="images/profile.jpg"
+                 alt="Profile Photo"
+                 class="profile">
+
+            <h1>
+                Hello, I'm <span>Radhika</span>
+            </h1>
+
+            <h2>BCA Student</h2>
+
+            <p>
+                Welcome to my personal portfolio website.
+                I am interested in web development and
+                learning new technologies.
+            </p>
+
+            <a href="#about" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a BCA student interested in web development,
+            programming and modern technologies.
+        </p>
+
+        <h3>Career Objective</h3>
+
+        <p>
+            To build a successful career in the IT industry
+            by improving my technical skills and gaining
+            practical experience.
+        </p>
+
+    </section>
+
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>BCA</h3>
+                <p>Bachelor of Computer Applications</p>
+                <p>Currently Pursuing</p>
+            </div>
+
+            <div class="card">
+                <h3>HSC</h3>
+                <p>Higher Secondary Certificate</p>
+                <p>Completed</p>
+            </div>
+
+            <div class="card">
+                <h3>SSC</h3>
+                <p>Secondary School Certificate</p>
+                <p>Completed</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span onclick="showSkillInfo('HTML', 'Standard markup language used to build web page structures.')">HTML</span>
+            <span onclick="showSkillInfo('CSS', 'Style sheet language used for describing the presentation and design of web pages.')">CSS</span>
+            <span onclick="showSkillInfo('Python', 'High-level programming language used for web development and automation.')">Python</span>
+            <span onclick="showSkillInfo('PHP', 'Server-side scripting language designed for Web Development.')">PHP</span>
+            <span onclick="showSkillInfo('C Programming', 'Foundational procedural programming language for software development.')">C Programming</span>
+            <span onclick="showSkillInfo('MS Office', 'Proficient in Word, Excel, PowerPoint for documentation and data management.')">MS Office</span>
+        </div>
+    </section>
+
+    <!-- POPUP MODAL BOX -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="skillTitle">Skill Title</h3>
+            <p id="skillDesc">Skill description goes here.</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT CODE -->
+    <script>
+        function showSkillInfo(name, description) {
+            document.getElementById("skillTitle").innerText = name;
+            document.getElementById("skillDesc").innerText = description;
+            document.getElementById("skillModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("skillModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById("skillModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="cards">
+
+        <a href="ecommerce.html" class="card">
+            <h3>E-Commerce Website</h3>
+            <p>Online shopping website created using HTML and CSS.</p>
+        </a>
+
+        <a href="index.html" class="card">
+            <h3>Personal Portfolio</h3>
+            <p>Professional portfolio website created using HTML and CSS.</p>
+        </a>
+
+        <a href="college.html" class="card">
+            <h3>College Website</h3>
+            <p>One-page college website created using HTML and CSS.</p>
+        </a>
+
+    </div>
+</section>
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>📧 Email: radhika@gmail.com</p>
+
+        <p>📱 Phone: +91 XXXXXXXXXX</p>
+
+        <p>📍 Location: Maharashtra, India</p>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 Radhika | My Portfolio</p>
+
+    </footer>
+
+</body>
+
+</html>
